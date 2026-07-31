@@ -1,4 +1,4 @@
-import profile from "../assets/images/profile.png";
+import profile from "../assets/images/Profile.png";
 import {
   FaGithub,
   FaLinkedin,
