@@ -57,7 +57,7 @@ function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-slate-900 rounded-2xl p-6 border border-slate-700 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 shadow-lg"
+              className="group bg-slate-900 rounded-2xl p-7 border border-slate-700 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-blue-500/20"
             >
 
               {/* Project Number */}
@@ -66,9 +66,9 @@ function Projects() {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition">
-                {project.title}
-              </h3>
+              <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-blue-400">
+  {project.title}
+</h3>
 
               {/* Description */}
               <p className="text-gray-400 leading-7 mb-5">
@@ -88,7 +88,7 @@ function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg flex items-center gap-2 transition duration-300"
+                    className="border border-blue-500 hover:bg-blue-500 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-lg flex items-center gap-2"
                   >
                     <FaGithub />
                     GitHub
@@ -104,7 +104,7 @@ function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-blue-500 hover:bg-blue-500 px-4 py-2 rounded-lg flex items-center gap-2 transition duration-300"
+                    className="border border-blue-500 hover:bg-blue-500 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-lg flex items-center gap-2"
                   >
                     <FaExternalLinkAlt />
                     Live Demo

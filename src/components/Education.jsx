@@ -18,15 +18,16 @@ function Education() {
         </p>
 
         {/* Education Card */}
-        <div className="relative bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 shadow-lg">
+        <div className="relative bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
 
-          {/* Icon */}
           <div className="flex items-start gap-5">
 
+            {/* Icon */}
             <div className="bg-blue-500/10 p-4 rounded-xl">
               <FaGraduationCap className="text-4xl text-blue-400" />
             </div>
 
+            {/* Content */}
             <div className="flex-1">
 
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
@@ -48,23 +49,26 @@ function Education() {
               </div>
 
               <p className="text-gray-300 mt-5">
-                Mahatma Gandhi Mission's College of Engineering &
-                Technology, Noida
+                Mahatma Gandhi Mission's College of Engineering & Technology,
+                Noida
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-4">
-
-                <div className="bg-slate-900 px-4 py-2 rounded-lg">
-                  <span className="text-gray-400">CGPA</span>
-                  <span className="text-blue-400 font-bold ml-2">
-                    7.5
-                  </span>
-                </div>
+              {/* Information Cards */}
+              <div className="mt-6 flex flex-wrap gap-4">
 
                 <div className="bg-slate-900 px-4 py-2 rounded-lg">
                   <span className="text-gray-400">Degree</span>
                   <span className="text-white font-semibold ml-2">
                     B.Tech CSE
+                  </span>
+                </div>
+
+                <div className="bg-slate-900 px-4 py-2 rounded-lg">
+                  <span className="text-gray-400">
+                    Expected Graduation
+                  </span>
+                  <span className="text-blue-400 font-semibold ml-2">
+                    2027
                   </span>
                 </div>
 
