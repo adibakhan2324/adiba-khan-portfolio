@@ -3,9 +3,17 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 function Projects() {
   const projects = [
     {
+      title: "Personal Portfolio Website",
+      description:
+        "A fully responsive personal portfolio website built using React, Vite, and Tailwind CSS to showcase my skills, projects, certifications, education, and contact information. Deployed on Vercel with a modern UI and mobile-friendly design.",
+      tech: "React • Vite • Tailwind CSS • JavaScript • Vercel",
+      github: "https://github.com/adibakhan2324/adiba-khan-portfolio",
+      demo: "https://adiba-khan-portfolio-v2.vercel.app",
+    },
+    {
       title: "E-Commerce Website",
       description:
-        "A full-stack e-commerce web application with user authentication, product catalog, shopping cart, and order management.",
+        "A full-stack e-commerce web application with user authentication, product catalog, shopping cart, secure checkout, and order management. Currently under development.",
       tech: "React • Node.js • Express.js • MongoDB",
       github: null,
       demo: null,
@@ -13,7 +21,7 @@ function Projects() {
     {
       title: "AI-Based Customer Feedback Analysis System",
       description:
-        "An AI-powered sentiment analysis system using BERT and LSTM models to classify customer reviews and generate business insights.",
+        "An AI-powered sentiment analysis system using BERT and LSTM models to classify customer reviews and generate business insights for business decision-making.",
       tech: "Python • Flask • BERT • LSTM • HTML • CSS",
       github:
         "https://github.com/adibakhan2324/AI-Customer-Feedback-Analysis",
@@ -22,7 +30,7 @@ function Projects() {
     {
       title: "Task Management App",
       description:
-        "A task management application with authentication, task tracking, due dates, and dashboard. Currently under development.",
+        "A task management application with user authentication, task tracking, deadlines, and progress dashboard. Currently under development.",
       tech: "React • Express.js • MongoDB",
       github: null,
       demo: null,
@@ -44,7 +52,7 @@ function Projects() {
           Some of my academic and personal projects
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
 
           {projects.map((project, index) => (
             <div
@@ -54,7 +62,7 @@ function Projects() {
 
               {/* Project Number */}
               <div className="text-blue-400 text-sm font-semibold mb-4">
-                PROJECT 0{index + 1}
+                PROJECT {String(index + 1).padStart(2, "0")}
               </div>
 
               {/* Title */}
@@ -73,21 +81,21 @@ function Projects() {
               </p>
 
               {/* Buttons */}
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
 
                 {project.github ? (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg flex items-center gap-2 transition"
+                    className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg flex items-center gap-2 transition duration-300"
                   >
                     <FaGithub />
                     GitHub
                   </a>
                 ) : (
-                  <span className="bg-slate-700 text-gray-400 px-4 py-2 rounded-lg">
-                    Coming Soon
+                  <span className="bg-slate-700 text-gray-300 px-4 py-2 rounded-lg">
+                    🚧 In Development
                   </span>
                 )}
 
@@ -96,7 +104,7 @@ function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-blue-500 hover:bg-blue-500 px-4 py-2 rounded-lg flex items-center gap-2 transition"
+                    className="border border-blue-500 hover:bg-blue-500 px-4 py-2 rounded-lg flex items-center gap-2 transition duration-300"
                   >
                     <FaExternalLinkAlt />
                     Live Demo
