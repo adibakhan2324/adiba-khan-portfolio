@@ -1,37 +1,98 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+import portfolioImage from "../assets/Images/portfolio.png";
+import aiFeedbackImage from "../assets/Images/ai-feedback.png";
+import ecommerceImage from "../assets/Images/ecommerce-placeholder.png";
+import taskImage from "../assets/Images/task-placeholder.png";
+
 function Projects() {
   const projects = [
     {
-      title: "Personal Portfolio Website",
+      title: "AI Customer Feedback Analysis System",
+      featured: true,
+      status: "Live",
+      image: aiFeedbackImage,
       description:
-        "A fully responsive personal portfolio website built using React, Vite, and Tailwind CSS to showcase my skills, projects, certifications, education, and contact information. Deployed on Vercel with a modern UI and mobile-friendly design.",
-      tech: "React • Vite • Tailwind CSS • JavaScript • Vercel",
-      github: "https://github.com/adibakhan2324/adiba-khan-portfolio",
-      demo: "https://adiba-khan-portfolio-v2.vercel.app",
+        "Developed an AI-powered customer sentiment analysis web application using BERT and Bi-LSTM models. The system analyzes customer reviews, detects business issues, generates recommendations, and visualizes insights through an interactive dashboard.",
+
+      tech: [
+        "Python",
+        "Flask",
+        "BERT",
+        "Bi-LSTM",
+        "TensorFlow",
+        "PyTorch",
+        "HTML",
+        "CSS",
+        "JavaScript",
+      ],
+
+      github:
+        "https://github.com/adibakhan2324/AI-Customer-Feedback-Analysis",
+
+      demo:
+        "https://ai-customer-feedback-analysis-1.onrender.com/",
     },
+
+    {
+      title: "Personal Portfolio Website",
+      featured: false,
+      status: "Live",
+      image: portfolioImage,
+
+      description:
+        "A modern portfolio website built with React, Vite and Tailwind CSS showcasing my projects, skills, education and experience with responsive design and smooth animations.",
+
+      tech: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "JavaScript",
+        "Vercel",
+      ],
+
+      github:
+        "https://github.com/adibakhan2324/adiba-khan-portfolio",
+
+      demo:
+        "https://adiba-khan-portfolio-v2.vercel.app",
+    },
+
     {
       title: "E-Commerce Website",
+      featured: false,
+      status: "In Development",
+      image: ecommerceImage,
+
       description:
-        "A full-stack e-commerce web application with user authentication, product catalog, shopping cart, secure checkout, and order management. Currently under development.",
-      tech: "React • Node.js • Express.js • MongoDB",
+        "A full-stack e-commerce application featuring authentication, product catalog, shopping cart, secure checkout, payment integration and admin dashboard.",
+
+      tech: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+      ],
+
       github: null,
       demo: null,
     },
-    {
-      title: "AI-Based Customer Feedback Analysis System",
-      description:
-        "An AI-powered sentiment analysis system using BERT and LSTM models to classify customer reviews and generate business insights for business decision-making.",
-      tech: "Python • Flask • BERT • LSTM • HTML • CSS",
-      github:
-        "https://github.com/adibakhan2324/AI-Customer-Feedback-Analysis",
-      demo: null,
-    },
+
     {
       title: "Task Management App",
+      featured: false,
+      status: "In Development",
+      image: taskImage,
+
       description:
-        "A task management application with user authentication, task tracking, deadlines, and progress dashboard. Currently under development.",
-      tech: "React • Express.js • MongoDB",
+        "A productivity application with authentication, task management, reminders, deadlines, priority levels and progress tracking dashboard.",
+
+      tech: [
+        "React",
+        "Express.js",
+        "MongoDB",
+      ],
+
       github: null,
       demo: null,
     },
@@ -39,84 +100,135 @@ function Projects() {
 
   return (
     <section
-      id="projects"
-      className="bg-slate-800 text-white py-20"
+  id="projects"
+  className="bg-slate-900 text-white py-24"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-blue-400 mb-4">
-          Projects
+        <h2 className="text-5xl font-bold text-center text-blue-400 mb-4">
+          Featured Projects
         </h2>
 
-        <p className="text-center text-gray-400 mb-12">
-          Some of my academic and personal projects
+        <p className="text-center text-gray-400 max-w-3xl mx-auto mb-16 leading-8">
+          A collection of academic and personal projects demonstrating my
+          experience in Full Stack Development, Artificial Intelligence,
+          problem solving and software engineering.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-10">
 
           {projects.map((project, index) => (
+
             <div
               key={index}
-              className="group bg-slate-900 rounded-2xl p-7 border border-slate-700 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-blue-500/20"
+              className="group overflow-hidden rounded-3xl border border-slate-700 bg-slate-800/70 backdrop-blur-md shadow-xl hover:border-blue-500 hover:-translate-y-3 hover:shadow-blue-500/20 transition-all duration-500"
             >
 
-              {/* Project Number */}
-              <div className="text-blue-400 text-sm font-semibold mb-4">
-                PROJECT {String(index + 1).padStart(2, "0")}
-              </div>
+              {/* IMAGE */}
 
-              {/* Title */}
-              <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-blue-400">
-  {project.title}
-</h3>
+              <div className="relative overflow-hidden">
 
-              {/* Description */}
-              <p className="text-gray-400 leading-7 mb-5">
-                {project.description}
-              </p>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
+                />
 
-              {/* Technologies */}
-              <p className="text-blue-400 font-medium text-sm mb-6">
-                {project.tech}
-              </p>
-
-              {/* Buttons */}
-              <div className="flex flex-wrap gap-3">
-
-                {project.github ? (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border border-blue-500 hover:bg-blue-500 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-lg flex items-center gap-2"
-                  >
-                    <FaGithub />
-                    GitHub
-                  </a>
-                ) : (
-                  <span className="bg-slate-700 text-gray-300 px-4 py-2 rounded-lg">
-                    🚧 In Development
-                  </span>
+                {project.featured && (
+                  <div className="absolute top-4 left-4 bg-yellow-400 text-black font-bold px-4 py-2 rounded-full shadow-lg">
+                    ⭐ Featured
+                  </div>
                 )}
 
-                {project.demo ? (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border border-blue-500 hover:bg-blue-500 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-lg flex items-center gap-2"
-                  >
-                    <FaExternalLinkAlt />
-                    Live Demo
-                  </a>
-                ) : null}
+                <div
+                  className={`absolute top-4 right-4 px-4 py-2 rounded-full text-sm font-semibold ${
+                    project.status === "Live"
+                      ? "bg-green-500"
+                      : "bg-orange-500"
+                  }`}
+                >
+                  {project.status}
+                </div>
+
+              </div>
+
+              {/* CONTENT */}
+
+              <div className="p-8">
+
+                <h3 className="text-3xl font-bold mb-4 group-hover:text-blue-400 transition">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-400 leading-7 mb-6">
+                  {project.description}
+                </p>
+
+                {/* TECH */}
+
+                <div className="flex flex-wrap gap-2 mb-8">
+
+                  {project.tech.map((tech, i) => (
+
+                    <span
+                      key={i}
+                      className="px-3 py-2 rounded-full text-sm bg-slate-700 border border-slate-600 text-blue-300 hover:bg-blue-600 hover:text-white transition"
+                    >
+                      {tech}
+                    </span>
+
+                  ))}
+
+                </div>
+
+                {/* BUTTONS */}
+
+                <div className="flex flex-wrap gap-4">
+
+                  {project.github ? (
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl font-semibold transition hover:scale-105"
+                    >
+                      <FaGithub />
+                      GitHub
+                    </a>
+
+                  ) : (
+
+                    <span className="bg-slate-700 px-5 py-3 rounded-xl text-gray-300">
+                      🚧 Coming Soon
+                    </span>
+
+                  )}
+
+                  {project.demo && (
+
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 border border-blue-500 hover:bg-blue-500 px-5 py-3 rounded-xl font-semibold transition hover:scale-105"
+                    >
+                      <FaExternalLinkAlt />
+                      Live Demo
+                    </a>
+
+                  )}
+
+                </div>
 
               </div>
 
             </div>
+
           ))}
 
         </div>
+
       </div>
     </section>
   );

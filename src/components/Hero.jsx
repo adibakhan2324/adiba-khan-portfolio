@@ -31,16 +31,17 @@ function Hero() {
             Adiba <span className="text-blue-400">Khan</span>
           </h1>
 
+          {/* Typing Animation */}
           <div className="text-3xl text-gray-300 mb-6">
             <TypeAnimation
               sequence={[
-                "Software Development Engineer",
+                "Software Engineer",
                 2000,
                 "Full Stack Developer",
                 2000,
-                "AI Enthusiast",
+                "AI/ML Enthusiast",
                 2000,
-                "Open to Internship & Full-Time Opportunities",
+                "Open to Software Engineering Internships & Full-Time Opportunities",
                 2000,
               ]}
               speed={50}
@@ -48,59 +49,85 @@ function Hero() {
             />
           </div>
 
+          {/* Introduction */}
           <p className="text-gray-400 leading-8 mb-8">
-            I am a 7th-semester B.Tech Computer Science and Engineering
-            student passionate about Software Development, Full Stack Web
-            Development, Artificial Intelligence, and building real-world
-            applications.
+            B.Tech Computer Science & Engineering student (Expected 2027)
+            passionate about building scalable web applications, solving
+            real-world problems, and developing AI-powered solutions.
+            Skilled in React, Node.js, Flask, Python, and modern web
+            technologies. Currently seeking Software Engineering
+            Internship and Full-Time opportunities.
           </p>
 
-          <div className="flex gap-4 mb-8">
-            <a
-  href="/Adiba_khan_Resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl flex items-center gap-2 transition duration-300 hover:scale-105 shadow-lg"
->
-  <FaDownload />
-  Resume
-</a>
+          {/* Professional Badges */}
+          <div className="flex flex-wrap gap-4 mb-8">
 
-            <a
-  href="#projects"
-  className="border border-blue-500 hover:bg-blue-500 px-6 py-3 rounded-lg transition"
->
-  View Projects
-</a>
+            <div className="bg-slate-800 border border-blue-500 rounded-full px-4 py-2 text-sm hover:scale-105 transition duration-300">
+              📍 New Delhi, India
+            </div>
+
+            <div className="bg-slate-800 border border-blue-500 rounded-full px-4 py-2 text-sm hover:scale-105 transition duration-300">
+              🎓 B.Tech Computer Science & Engineering (Expected 2027)
+            </div>
+
+            <div className="bg-slate-800 border border-blue-500 rounded-full px-4 py-2 text-sm hover:scale-105 transition duration-300">
+              💼 Open to Software Engineering Internships & Full-Time Opportunities
+            </div>
+
           </div>
 
-          <div className="flex gap-6 text-3xl">
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4 mb-8">
 
             <a
-             href="https://github.com/adibakhan2324"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="hover:text-blue-400 hover:scale-125 transition duration-300"
+              href="#projects"
+              className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl flex items-center gap-2 transition duration-300 hover:scale-105 shadow-lg"
             >
-            <FaGithub />
+              🚀 View Projects
             </a>
 
             <a
-             href="https://www.linkedin.com/in/adiba-khan-00b308339"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="hover:text-blue-400 hover:scale-125 transition duration-300"
-           >
-            <FaLinkedin />
+              href="/Adiba_khan_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-blue-500 hover:bg-blue-500 px-6 py-3 rounded-xl flex items-center gap-2 transition duration-300 hover:scale-105"
+            >
+              <FaDownload />
+              Resume
+            </a>
+
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex gap-6 text-3xl">
+
+            <a
+              href="https://github.com/adibakhan2324"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 hover:scale-125 transition duration-300"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/adiba-khan-00b308339"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 hover:scale-125 transition duration-300"
+            >
+              <FaLinkedin />
             </a>
 
             <a
               href="mailto:khanadiba263@gmail.com"
               className="hover:text-blue-400 hover:scale-125 transition duration-300"
             >
-            <FaEnvelope />
-          </a>
+              <FaEnvelope />
+            </a>
+
           </div>
+
         </motion.div>
 
         {/* Right Side */}

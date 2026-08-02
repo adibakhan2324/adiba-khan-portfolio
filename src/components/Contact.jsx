@@ -1,168 +1,165 @@
 import {
+  FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaEnvelope,
   FaMapMarkerAlt,
+  FaPaperPlane,
 } from "react-icons/fa";
 
+import { motion } from "framer-motion";
 function Contact() {
   return (
-    <section
+    <motion.section
       id="contact"
-      className="bg-slate-800 text-white py-20 px-6"
+      className="bg-slate-900 text-white py-24 px-6"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-blue-400 mb-4">
-          Contact Me
+
+        <h2 className="text-5xl font-bold text-center text-blue-400 mb-4">
+          Let's Connect
         </h2>
 
-        <p className="text-center text-gray-400 mb-12">
-          I'm open to internship and software development opportunities.
+        <p className="text-center text-gray-400 max-w-2xl mx-auto mb-16 leading-8">
+          I'm currently looking for Software Development Engineer
+          internships and full-time opportunities. Feel free to reach
+          out if you'd like to discuss a project, collaboration or
+          career opportunity.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-10">
 
-          {/* Contact Information */}
-          <div className="bg-slate-900 rounded-2xl p-8 border border-slate-700 hover:border-blue-500 transition duration-300">
+          {/* Contact Card */}
 
-            <h3 className="text-2xl font-bold mb-6">
-              Let's Connect
+          <div className="bg-slate-800/70 backdrop-blur-lg rounded-3xl p-10 border border-slate-700 hover:border-blue-500 transition-all duration-500">
+
+            <h3 className="text-3xl font-bold text-blue-400 mb-8">
+              Contact Information
             </h3>
 
-            <p className="text-gray-400 leading-7 mb-8">
-              I'm always interested in connecting with recruiters,
-              developers, and professionals about software development,
-              AI, and internship opportunities.
-            </p>
+            <div className="space-y-8">
 
-            <div className="space-y-6">
+              <div className="flex items-center gap-5">
 
-              {/* Email */}
-              <a
-                href="mailto:khanadiba263@gmail.com"
-                className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition"
-              >
-                <FaEnvelope className="text-2xl text-blue-400" />
+                <div className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-2xl">
+                  <FaEnvelope />
+                </div>
 
                 <div>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-gray-400 text-sm">
                     Email
                   </p>
 
-                  <p>
+                  <a
+                    href="mailto:khanadiba263@gmail.com"
+                    className="hover:text-blue-400 transition"
+                  >
                     khanadiba263@gmail.com
-                  </p>
-                </div>
-              </a>
+                  </a>
 
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/adiba-khan-00b308339"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition"
-              >
-                <FaLinkedin className="text-2xl text-blue-400" />
+                </div>
+
+              </div>
+
+              <div className="flex items-center gap-5">
+
+                <div className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-2xl">
+                  <FaMapMarkerAlt />
+                </div>
 
                 <div>
-                  <p className="text-sm text-gray-500">
-                    LinkedIn
-                  </p>
 
-                  <p>
-                    Adiba Khan
-                  </p>
-                </div>
-              </a>
-
-              {/* GitHub */}
-              <a
-                href="https://github.com/adibakhan2324"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition"
-              >
-                <FaGithub className="text-2xl text-blue-400" />
-
-                <div>
-                  <p className="text-sm text-gray-500">
-                    GitHub
-                  </p>
-
-                  <p>
-                    adibakhan2324
-                  </p>
-                </div>
-              </a>
-
-              {/* Location */}
-              <div className="flex items-center gap-4 text-gray-300">
-                <FaMapMarkerAlt className="text-2xl text-blue-400" />
-
-                <div>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-gray-400 text-sm">
                     Location
                   </p>
 
                   <p>
-                    Noida, India
+                    New Delhi, India
                   </p>
+
                 </div>
+
               </div>
 
             </div>
+
+            {/* Social Buttons */}
+
+            <div className="flex gap-5 mt-12">
+
+              <a
+                href="https://github.com/adibakhan2324"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl transition hover:scale-105"
+              >
+                <FaGithub />
+                GitHub
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/adiba-khan-00b308339"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 border border-blue-500 hover:bg-blue-500 px-6 py-3 rounded-xl transition hover:scale-105"
+              >
+                <FaLinkedin />
+                LinkedIn
+              </a>
+
+            </div>
+
           </div>
 
-          {/* Contact Form */}
-          <form
-            action="mailto:khanadiba263@gmail.com"
-            method="POST"
-            encType="text/plain"
-            className="bg-slate-900 rounded-2xl p-8 border border-slate-700 hover:border-blue-500 transition duration-300"
-          >
+          {/* Google Map */}
 
-            <h3 className="text-2xl font-bold mb-6">
-              Send Me a Message
-            </h3>
+          <div className="rounded-3xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-500">
 
-            <input
-              type="text"
-              name="Name"
-              placeholder="Your Name"
-              required
-              className="w-full mb-4 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 outline-none focus:border-blue-500 transition"
-            />
+            <iframe
+              title="New Delhi"
+              src="https://www.google.com/maps?q=New+Delhi,+India&output=embed"
+              width="100%"
+              height="100%"
+              className="min-h-[500px]"
+              loading="lazy"
+            ></iframe>
 
-            <input
-              type="email"
-              name="Email"
-              placeholder="Your Email"
-              required
-              className="w-full mb-4 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 outline-none focus:border-blue-500 transition"
-            />
-
-            <textarea
-              name="Message"
-              rows="5"
-              placeholder="Your Message"
-              required
-              className="w-full mb-4 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 outline-none focus:border-blue-500 transition"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-500 hover:bg-blue-600 py-3 rounded-lg font-semibold transition duration-300 hover:scale-[1.02]"
-            >
-              Send Message
-            </button>
-
-          </form>
+          </div>
 
         </div>
+
+        {/* Bottom CTA */}
+
+        <div className="mt-20 text-center">
+
+          <h3 className="text-3xl font-bold mb-4">
+            Ready to Build Something Amazing?
+          </h3>
+
+          <p className="text-gray-400 mb-8">
+            Let's connect and discuss opportunities, innovative ideas,
+            or exciting software projects.
+          </p>
+
+       <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=khanadiba263@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl text-lg font-semibold transition hover:scale-105"
+>
+  <FaPaperPlane />
+  Send Email
+</a> 
+
+        </div>
+
       </div>
-    </section>
+    </motion.section>
   );
 }
 
