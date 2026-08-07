@@ -191,7 +191,7 @@ function Skills() {
 
           <div className="flex flex-wrap justify-center gap-4 mt-6">
 
-            {["Spring Boot", "REST APIs", "Docker", "AWS"].map((item) => (
+            {["Data Analytics", "Python for Data Analysis", "SQL", "Data Visualization"].map((item) => (
               <span
                 key={item}
                 className="bg-white/10 px-5 py-3 rounded-full border border-white/20 backdrop-blur-sm"

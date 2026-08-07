@@ -108,7 +108,7 @@ function About() {
           </div>
 
           <div className="bg-slate-900 rounded-2xl p-8 text-center border border-slate-700 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300">
-            <h3 className="text-5xl font-bold text-blue-400 mb-3">1</h3>
+            <h3 className="text-5xl font-bold text-blue-400 mb-3">2</h3>
             <p className="text-gray-300">Internship</p>
           </div>
 

@@ -4,6 +4,20 @@ function Certificates() {
 
   const certificates = [
     {
+      title: "Web Development Internship Certificate",
+      organization: "Unified Mentor Pvt. Ltd.",
+      year: "2026",
+      description:
+        "Successfully completed a three-month internship as a Web Development Intern from 15 March 2026 to 15 June 2026.",
+      skills: [
+        "Web Development",
+        "Frontend Development",
+        "Software Development",
+      ],
+      link: "/certificates/Unified%20Mentor%20Web%20Development%20Internship.pdf",
+    },
+
+    {
       title: "AI Internship Certificate",
       organization: "MCAI – Jamia Hamdard University",
       year: "2026",
@@ -60,29 +74,20 @@ function Certificates() {
     },
   ];
 
-
   return (
-    <section
-      id="certificates"
-      className="bg-slate-900 text-white py-24 px-6"
-    >
+    <section id="certificates" className="py-20 px-4">
 
       <div className="max-w-6xl mx-auto">
-
 
         <h2 className="text-5xl font-bold text-center text-blue-400 mb-5">
           Certificates
         </h2>
 
-
         <p className="text-center text-gray-400 mb-16">
           Certifications and professional learning achievements
         </p>
 
-
-
         <div className="grid md:grid-cols-2 gap-8">
-
 
           {certificates.map((certificate, index) => (
 
@@ -91,9 +96,7 @@ function Certificates() {
               className="bg-slate-800 rounded-3xl p-8 border border-slate-700 hover:border-blue-500 hover:-translate-y-3 transition-all duration-500 shadow-xl"
             >
 
-
               <div className="flex justify-between items-center mb-6">
-
 
                 <div className="bg-blue-500/20 p-4 rounded-2xl">
 
@@ -104,32 +107,23 @@ function Certificates() {
 
                 </div>
 
-
                 <span className="text-gray-400">
                   {certificate.year}
                 </span>
 
-
               </div>
-
-
 
               <h3 className="text-2xl font-bold mb-3">
                 {certificate.title}
               </h3>
 
-
               <p className="text-blue-400 text-lg mb-5">
                 {certificate.organization}
               </p>
 
-
-
               <p className="text-gray-300 leading-7 mb-6">
                 {certificate.description}
               </p>
-
-
 
               <div className="flex flex-wrap gap-2 mb-8">
 
@@ -146,8 +140,6 @@ function Certificates() {
 
               </div>
 
-
-
               <a
                 href={certificate.link}
                 target="_blank"
@@ -158,17 +150,13 @@ function Certificates() {
                 View Certificate
               </a>
 
-
             </div>
 
           ))}
 
-
         </div>
 
-
       </div>
-
 
     </section>
   );
